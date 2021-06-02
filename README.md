@@ -3,4 +3,4 @@ iDIRECT - Inference of Direct and Indirect Relationships with Effective Copula-b
 
 The scripts and datasets will be available after publication. 
 
-Please email naijia.xiao@ou.edu to request the content for the time being. 
+Please email naijia.xiao@ou.edu to request the contents for the time being. 
