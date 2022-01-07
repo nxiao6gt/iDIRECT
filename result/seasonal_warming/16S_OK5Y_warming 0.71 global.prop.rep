@@ -1,0 +1,23 @@
+Average path distance (GD)	5.80860885960309
+Geodesic efficiency (E)	0.240266644944214
+Harmonic geodesic distance (HD)	4.16204255164999
+Average clustering coefficient (avgCC)	0.321073355689064
+Maximal degree	63
+Nodes with max degree	OTU_799
+Centralization of degree (CD)	0.1163993
+Maximal betweenness	30959.3
+Nodes with max betweenness	OTU_131
+Centralization of betweenness (CB)	0.2525403
+Maximal stress centrality	478269
+Nodes with max stress centrality	OTU_21522
+Centralization of stress centrality (CS)	3.896561
+Maximal eigenvector centrality	0.254860187820422
+Nodes with max eigenvector centrality	OTU_53
+Centralization of eigenvector centrality (CE)	0.2371824
+Density (D)	0.0131750980589359
+Reciprocity	1
+Transitivity (Trans)	0.340947546531303
+Connectedness (Con)	0.862365483254551
+Efficiency	0.987005143391521
+Hierarchy	0
+Lubness	1

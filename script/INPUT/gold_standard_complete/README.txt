@@ -1,0 +1,1 @@
+These gold standard files specify the edges AND the non-edges. For the sake of being didactic, these files are provided here, though the evaluation scripts actually use the files in the directory called gold_standard_edges_only. From the edges, the non-edges can be enumerated according to certain rules based on how the challenge was designed.

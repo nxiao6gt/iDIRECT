@@ -1,0 +1,34 @@
+ID	Domain	Phylum	Class	Order	Family	Genus	Role	iDIRECT Warming 	iDIRECT Control 	Original Warming 	Original Control 
+OTU_15	Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Net Hub	Yes			
+OTU_14	Bacteria	Acidobacteria	Acidobacteria_Gp1	Unclassified	Unclassified	Gp1	Mod Hub	Yes	Yes	Yes	
+OTU_21	Bacteria	Acidobacteria	Acidobacteria_Gp1	Unclassified	Unclassified	Gp1	Mod Hub		Yes		Yes
+OTU_35	Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Mod Hub		Yes		Yes
+OTU_102	Bacteria	Acidobacteria	Acidobacteria_Gp1	Unclassified	Unclassified	Gp1	Mod Hub		Yes	Yes	Yes
+OTU_117	Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Hyphomicrobiaceae	Devosia	Mod Hub		Yes		Yes
+OTU_131	Bacteria	Actinobacteria	Actinobacteria	Solirubrobacterales	Solirubrobacteraceae	Solirubrobacter	Mod Hub	Yes	Yes	Yes	
+OTU_141	Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Mod Hub	Yes	Yes	Yes	Yes
+OTU_176	Bacteria	Verrucomicrobia	Subdivision3	Unclassified	Unclassified	Subdivision3	Mod Hub		Yes		
+OTU_4	Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingosinicella	Mod Hub	Yes			
+OTU_31	Bacteria	Acidobacteria	Acidobacteria_Gp6	Unclassified	Unclassified	Gp6	Mod Hub	Yes		Yes	
+OTU_38	Bacteria	Nitrospira	Nitrospira	Nitrospirales	Nitrospiraceae	Nitrospira	Mod Hub	Yes			
+OTU_53	Bacteria	Unclassified	Unclassified	Unclassified	Unclassified	Unclassified	Mod Hub	Yes		Yes	
+OTU_81	Bacteria	Actinobacteria	Actinobacteria	Solirubrobacterales	Solirubrobacteraceae	Solirubrobacter	Mod Hub	Yes		Yes	
+OTU_115	Bacteria	Proteobacteria	Deltaproteobacteria	Unclassified	Unclassified	Unclassified	Mod Hub	Yes		Yes	
+OTU_134	Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Hyphomicrobiaceae	Pedomicrobium	Mod Hub	Yes			
+OTU_443	Bacteria	Gemmatimonadetes	Gemmatimonadetes	Gemmatimonadales	Gemmatimonadaceae	Gemmatimonas	Mod Hub	Yes			
+OTU_761	Bacteria	Proteobacteria	Deltaproteobacteria	Unclassified	Unclassified	Unclassified	Mod Hub	Yes			
+OTU_799	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Unclassified	Mod Hub	Yes		Yes	
+OTU_892	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Skermanella	Mod Hub	Yes		Yes	
+OTU_940	Bacteria	Acidobacteria	Acidobacteria_Gp1	Unclassified	Unclassified	Gp1	Mod Hub	Yes			
+OTU_1513	Bacteria	Unclassified	Unclassified	Unclassified	Unclassified	Unclassified	Mod Hub	Yes		Yes	
+OTU_60	Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Unclassified	Unclassified	Mod Hub			Yes	
+OTU_112	Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Micromonosporaceae	Micromonospora	Mod Hub			Yes	
+OTU_121	Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Methylobacteriaceae	Microvirga	Mod Hub			Yes	
+OTU_3634	Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Xanthobacteraceae	Pseudolabrys	Mod Hub			Yes	
+OTU_7456	Bacteria	Acidobacteria	Acidobacteria_Gp6	Unclassified	Unclassified	Gp6	Mod Hub				
+OTU_119	Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae 2	Oxalophagus	Connector	Yes			
+OTU_132	Bacteria	Acidobacteria	Acidobacteria_Gp3	Unclassified	Unclassified	Gp3	Connector	Yes			
+OTU_1382	Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Unclassified	Unclassified	Connector	Yes			
+OTU_21522	Bacteria	Actinobacteria	Actinobacteria	Solirubrobacterales	Solirubrobacteraceae	Solirubrobacter	Connector	Yes			
+OTU_22728	Bacteria	Proteobacteria	Betaproteobacteria	Unclassified	Unclassified	Unclassified	Connector	Yes			
+OTU_11276	Bacteria	Acidobacteria	Acidobacteria_Gp2	Unclassified	Unclassified	Gp2	Connector			Yes	

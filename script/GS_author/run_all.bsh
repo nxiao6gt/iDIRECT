@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+#SBATCH --partition=all,ieg
+#SBATCH --exclude=c386
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=16G
+#SBATCH --output=log/dream5_ndgs_%J.txt
+#SBATCH --error=log/dream5_ndgs_%J_err.txt
+#SBATCH --time=10:00:00
+#SBATCH --job-name=iDIRECT
+#SBATCH --workdir=/condo/ieg/nxiao6/iDIRECT
+#
+#################################################
+cd $SLURM_SUBMIT_DIR
+
+module load MATLAB
+
+echo "matlab -nodisplay -r \"SilenceAll($1)\""
+matlab -nodisplay -r "SilenceAll($1)"

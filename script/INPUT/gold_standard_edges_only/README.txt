@@ -1,0 +1,1 @@
+These files specify only the edges of the networks. They do not specify the non-edges (though these are enumerated by the evaluation code according to certain rules based on how the challenge was designed.
