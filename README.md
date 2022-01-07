@@ -110,7 +110,7 @@ Scripts used to generate the results in the manuscript are located in the
 `script` folder. Main results used by the scripts are located in the `result` 
 folder. Due to the size limitation, other intermediate results are saved in a 
 zipped data folder `iDIRECT_out` downloadable at 
-<http://ieg4.rccc.ou.edu/publication/iDIRECT/>. To use it, please download and 
+<http://ieg4.rccc.ou.edu/publication/iDIRECT/iDIRECT_out.zip>. To use it, please download and 
 decompress it to the same parent folder as the `iDIRECT` project folder. The 
 overall folder layout should be
 ```
