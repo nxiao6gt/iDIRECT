@@ -35,6 +35,12 @@ The main functions for iDIRECT is included in the script `idirect.pyc`, with
 auxiliary functions in the scripts `file_handler.pyc` and `net_handler.pyc`. A 
 demonstration script `demo.py` is included as a minimal example.
 
+The default `.pyc` files are compiled from Python 3.8.6. If your Python version
+is different, please replace the default `.pyc` files with the corresponding
+files from `versions/x.x.x/`, where `x.x.x` is your Python version number. If
+your Python version is not available, please email <naijia.xiao@ou.edu> to
+request an update.
+
 The modules can be imported by
 ```
 import idirect as idir
