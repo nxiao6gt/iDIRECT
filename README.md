@@ -37,9 +37,10 @@ demonstration script `demo.py` is included as a minimal example.
 
 The default `.pyc` files are compiled from Python 3.8.6. If your Python version
 is different, please replace the default `.pyc` files with the corresponding
-files from `versions/x.x.x/`, where `x.x.x` is your Python version number. If
-your Python version is not available, please email <naijia.xiao@ou.edu> to
-request an update.
+files from `versions/x.x/`, where `x.x` is your Python version number. For
+example, if your Python version is 3.9.5, please copy `.pyc` files from
+`versions/3.9/`. If your Python version is not available, please email
+<naijia.xiao@ou.edu> to request an update.
 
 The modules can be imported by
 ```
