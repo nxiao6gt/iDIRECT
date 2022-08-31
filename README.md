@@ -35,13 +35,6 @@ The main functions for iDIRECT is included in the script `idirect.pyc`, with
 auxiliary functions in the scripts `file_handler.pyc` and `net_handler.pyc`. A 
 demonstration script `demo.py` is included as a minimal example.
 
-The default `.pyc` files are compiled from Python 3.8.6. If your Python version
-is different, please replace the default `.pyc` files with the corresponding
-files from `versions/x.x/`, where `x.x` is your Python version number. For
-example, if your Python version is 3.9.5, please copy `.pyc` files from
-`versions/3.9/`. If your Python version is not available, please email
-<naijia.xiao@ou.edu> to request an update.
-
 The modules can be imported by
 ```
 import idirect as idir
@@ -111,6 +104,38 @@ N1	N2	0.696345122
 N2	N3	0.696345122
 N1	N3	0.055394035
 ```
+
+## Questions and Answers
+
+### I received an error stating "ImportError: bad magic number in 'idirect': b'\x16\r\r\n'" when running iDIRECT. What happened? ###
+
+A: The default `.pyc` files are compiled from Python 3.8.6. If your Python version
+is different, please replace the default `.pyc` files with the corresponding
+files from `versions/x.x/`, where `x.x` is your Python version number. For
+example, if your Python version is 3.9.5, please copy `.pyc` files from
+`versions/3.9/`. If your Python version is not available, please email
+<naijia.xiao@ou.edu> to request an update.
+
+### Does iDIRECT only deal positively correlated edges? What if I have negatively correlated edges? ###
+A: Yes, it is recommended to use the absolute values before feeding them to iDIRECT. Then one can use the signs in the original matrix to determine the signs in the iDIRECT output.
+
+A deeper cause of this behavior is that I chose to implement iDIRECT for unsigned values only. This is because it is difficult to implement iDIRECT for signed values. Suppose two nodes (A and B) are connected through C and D. If I implement iDIRECT with signed values, and suppose the association of path A-C-B is 0.9 and the association of path A-D-B is -0.9. This is highly unlikely in reality, but it almost certainly happens in practice. The resulting nonlinear S- and T-solvers in iDIRECT will perform poorly in this case. By implementing iDIRECT for unsigned values only, I do not need to deal with this unrealistic but difficult case.
+
+### I have a large network to run and it is taking too long to finish. Are there any ways to reduce the running time? ###
+A: For simple networks with few links, one can provide all links and run iDIRECT as in the demo example `demo.py`. For complex networks with many nodes, keeping all the links is both unnecessary and impractical, because one is not interested in the links with association strength below a certain cutoff threshold and the computation takes too much time. To address this problem, when calling the `direct_association` function from iDIRECT package, one can use the optional argument `th` to ignore links with low association strength. The rationale is that the link between two nodes is most probably caused by random association when their association strength is below a cutoff threshold, and the corresponding direct association strength should be zero. For example, to ignore links with total association strength < 0.6, use
+```
+S,err = idir.direct_association(G, th=0.6)
+```
+Then links with a total association strength < 0.6 will never be in the direct association network `S`. To ignore links whose association strength is not in the top 500, use
+```
+S,err = idir.direct_association(G, th=500)
+```
+Then links with a total association strength below the top 500 will never be in the direct association network `S`.
+
+### If one of the direct association strength is a very small number, should I keep it as a direct edge or remove it? ###
+A: In iDIRECT, direct links are interpreted as those with direct association strengths significantly (P < 0.05) different from background noises. Those background noises are estimated by computing the differences between the observed indirect association strengths and the iDIRECT-predicted indirect association strengths of random links below the RMT-determined cutoff. 
+
+For example, consider a dataset with 100 OTUs. The total number of pairwise associations is 4,950. Suppose 500 of them are above the RMT cutoff and count as potential links. Let the corresponding total and direct association strength be $w_i$ and $v_i$ (i=1,2,...,500), respectively. Using $w_i$ and $v_i$ (i=1,2,...,500), I can calculate the indirect association strength for the remaining 4,450 association pairs. Let the corresponding total and indirect association strength be $w_i$ and $u_i$ (i=501,2,...,4950), respectively. The difference $v_i = |w_i - u_i|$ (i=501,502,...,4950) can be used to estimate the background noise, where (-) is the inverse operator defined in Eq. (B2) in my supplement (page 21, above line 419). Then we can use the 5% quantile of $v_i$ (i=501,502,...,4950) as a cutoff, $v_th$. The top 500 links with $v_i < v_th$ are discarded, since their direct association strength is much smaller than the background noise. Because $v_th$ is usually smaller, one may even use $w_i$ instead of $v_i$ (i=501,502,...,4950) when determining $v_th$ to save computation time.
 
 ## Result Reproduction
 Scripts used to generate the results in the manuscript are located in the 
@@ -418,4 +443,3 @@ The eigenvalues of the corresponding matrices are stored in JSON as a text file
 in `result/example_condit/ex_math_conditioning.txt`. The full matrices with
 different size and association measures can be found as separate files in
 the `example_condit` folder in the downloadable data folder `iDIRECT_out`.
-
