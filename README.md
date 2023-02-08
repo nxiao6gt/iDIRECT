@@ -107,6 +107,10 @@ N1	N3	0.055394035
 
 ## Questions and Answers
 
+### All my results are "nan". What happened? ###
+
+A: This might be caused by one of your edges being 1. Please scale all your edges by a number smaller than 1.
+
 ### I received an error stating "ImportError: bad magic number in 'idirect': b'\x16\r\r\n'" when running iDIRECT. What happened? ###
 
 A: The default `.pyc` files are compiled from Python 3.8.6. If your Python version
